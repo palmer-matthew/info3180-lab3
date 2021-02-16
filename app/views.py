@@ -29,7 +29,7 @@ def about():
 def contact():
     contact_form = ContactForm()
     if request.method == 'POST':
-        if contact_form.validate_on_submit:
+        if contact_form.validate_on_submit():
             flash('Email was succesfully sent', 'success')
         flash_errors(contact_form)
     return render_template('contact.html', form=contact_form)
