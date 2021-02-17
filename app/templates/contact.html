@@ -2,28 +2,33 @@
 
 {% block main %}
     <h2>Contact Form</h2>
-    <hr>
-    <div class="container">  
+    <hr class="top">
+    <p class="instruct">Fill in this form to contact the site owners</p>
+    <div>  
         <form action="{{ url_for('contact') }}" method="post">
             {% include 'messages.html' %}
             {{ form.csrf_token }}
             <div class="form-group">
-                {{ form.name.label }}
+                {{ form.name.label }} <span>Required</span>
+                <p>Please enter your full name.</p>
                 {{ form.name }}
             </div>    
             <div class="form-group">
-                {{ form.email.label }}
+                {{ form.email.label }} <span>Required</span>
+                <p>Please enter your email address.</p>
                 {{ form.email }}
             </div>
             <div class="form-group">
-                {{ form.subject.label }}
+                {{ form.subject.label }} <span>Required</span>
+                <p>Please enter the subject for your message.</p>
                 {{ form.subject }}
             </div>
             <div class="form-group">
-                {{ form.message.label }}
+                {{ form.message.label }} <span>Required</span>
+                <p>Please enter the message you would like to send.</p>
                 {{ form.message }}
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>        
+            <button type="submit">Send</button>        
         </form>
     </div>
 {% endblock %}

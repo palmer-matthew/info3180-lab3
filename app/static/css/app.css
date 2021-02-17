@@ -1,3 +1,57 @@
 body {
     padding-top: 5rem;
 }
+
+h2{
+    font-weight: bold;
+}
+
+form button{
+    width: 7vw;
+    height: 5vh;
+    border: none;
+    color: #fff;
+    background-color: #1182d4;
+    border-radius: 7%;
+}
+
+.instruct{
+    margin-bottom: 40px;
+}
+.top {
+    height: 2px;
+    background-color: rgb(158, 157, 157);
+}
+
+input{
+    width: 35%;
+    height: 6vh;
+}
+
+textarea{
+    width: 35%;
+    height: 20vh;
+    border-radius: 1%;
+}
+
+label{
+    font-weight: bold;
+}
+
+.form-group span{
+    color: rgb(189, 2, 2);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-group span::before{
+    content: "(";
+}
+
+.form-group span::after{
+    content: ")";
+}
+
+.form-group p{
+    margin-bottom: 5px;
+}
