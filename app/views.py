@@ -31,12 +31,12 @@ def contact():
     contact_form = ContactForm()
     if request.method == 'POST':
         if contact_form.validate_on_submit():
-            send = ('Matthew Palmer', 'somerandom@gmail.com')
+            send = (request.form['name'], request.form['email'])
             msg = Message(subject=request.form['subject'], sender=send)
-            msg.add_recipient((request.form['name'], request.form['email']))
+            msg.add_recipient(('Site Developer', 'somerandom@gmail.com'))
             msg.body= request.form['message']
             mail.send(msg)
-            flash('Email was succesfully sent to {}'.format(request.form['name']), 'success')
+            flash('Email was succesfully sent to {}'.format('Site Developer'), 'success')
             return redirect(url_for('home'))
         flash_errors(contact_form)
     return render_template('contact.html', form=contact_form)

@@ -16,7 +16,7 @@ form button{
 }
 
 .instruct{
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 .top {
     height: 2px;
@@ -31,7 +31,6 @@ input{
 textarea{
     width: 35%;
     height: 20vh;
-    border-radius: 1%;
 }
 
 label{
